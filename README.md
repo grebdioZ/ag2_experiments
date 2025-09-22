@@ -2,6 +2,8 @@
 
 This project demonstrates multi-agent conversational workflows using the Autogen (AG2) framework. It includes swarm orchestration examples for airline customer service scenarios, such as flight modification, cancellation, and lost baggage handling.
 
+This was taken and adapted from the AG2 examples.
+
 # HOWEVER
 
 1. I could not get this to work with the OpenAI Azure backend. When executing I get
