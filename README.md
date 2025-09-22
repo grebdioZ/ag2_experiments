@@ -4,7 +4,21 @@ This project demonstrates multi-agent conversational workflows using the Autogen
 
 This was taken and adapted from the AG2 examples.
 
-# HOWEVER
+Note that at least *I* could not get this to work with the OpenAI Azure backend and had to use a local Ollama server, see the Important Notes / Issues section below.
+
+## Structure
+- `swarm_example/`: Jupyter notebooks with swarm agent chat examples.
+- `resources.json`: Example resources for agents.
+
+## Requirements
+- Python 3.8+
+- Install dependencies with `uv sync`.
+
+## Usage
+
+* Run one of the notebooks in `swarm_example/` to see agent chat orchestration in action.
+
+# Important Notes / Issues
 
 1. I could not get this to work with the OpenAI Azure backend. When executing I get
     ```
@@ -38,19 +52,10 @@ This was taken and adapted from the AG2 examples.
       ```
       Apparently, at the first call to OpenAI's API, a 404 error is returned. I have not been able to figure out why.
   
-2. With the ollama client, at least I could proceed, but then
+2. With the **Ollama** backend, at least I could get it to work, but I had to
 
-* I needed to patch swarm_agent.py at `transfer_to_agent` and add `**kwargs:Any` to the function definition to prevent and unexpected keyword argument error.
-* I needed to use at least the qwen-8b model to get it somewhat to work, but after asking the user for the flight number, the system just keeps alternating between swarm executor with function `transfer_Triage_Agent_to_Flight_Modification_Agent` and the triage agent until the maximum number of iterations (50) was reached.
-
-## Structure
-- `swarm_example/`: Jupyter notebooks with swarm agent chat examples.
-- `resources.json`: Example resources for agents.
-
-## Requirements
-- Python 3.8+
-- Install dependencies with `pip install -r requirements.txt` (or use `pyproject.toml` if available).
-
-## Usage
-Run the notebooks in `swarm_example/` to see agent chat orchestration in action.
+* Patch swarm_agent.py at `transfer_to_agent` and add `**kwargs:Any` to the function definition to prevent and unexpected keyword argument error.
+* Change a lot of imports from `from autogen import ...` to `from autogen.agentchat.contrib.swarm_agent import ...` as appropriate.
+* Change the `transfer_to_triage_description` handoff command, or the system would just keep alternating between swarm executor with function `transfer_Triage_Agent_to_Flight_Modification_Agent` and the triage agent until the maximum number of iterations (50) was reached.
+* Use at least the qwen-8b model to get it somewhat to work
 
