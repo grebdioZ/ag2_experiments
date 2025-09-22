@@ -1,0 +1,49 @@
+[
+  {
+    "model": "gemma3:1b",
+    "api_type": "ollama",
+    "base_url": "http://localhost:11434",
+    "model_config": {
+      "family": "gemma3",
+      "vision": false,
+      "function_calling": true,
+      "json_output": true,
+      "structured_output": true,
+      "multiple_system_messages": false
+    }
+  },
+  {
+    "model": "qwen3:0.6b",
+    "api_type": "ollama"
+  },
+  {
+    "model": "qwen3:8b",
+    "api_type": "ollama"
+  },
+  {
+    "model": "gpt-4.1-nano-2025-04-14",
+    "api_type": "openai",
+    "api_version": "2025-03-01-preview",
+    "base_url": "https://fhgenie-api-mevis-mevis-mas.openai.azure.com/openai/v1/"
+  },
+  {
+    "model": "gpt-4o-2024-11-20",
+    "api_type": "azure",
+    "api_version": "2025-03-01-preview",
+    "base_url": "https://fhgenie-api-mevis-mevis-mas.openai.azure.com/openai/v1/"
+  },
+  {
+    "name": "gpt-5-nano-2025-08-07",
+    "api_type": "openai",
+    "api_version": "2025-03-01-preview",
+    "base_url": "https://fhgenie-api-mevis-mevis-mas.openai.azure.com/openai/v1/"
+  },
+  {
+    "name": "gpt-5-mini-2025-08-07",
+    "api_type": "openai",
+    "api_version": "2025-03-01-preview",
+    "base_url": "https://fhgenie-api-mevis-mevis-mas.openai.azure.com/openai/v1/"
+  }
+]
+
+
