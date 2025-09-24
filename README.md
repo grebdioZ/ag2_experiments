@@ -18,7 +18,7 @@ Note that at least **I** could not get this to work with the OpenAI Azure backen
 
 ## Usage
 
-- Run one of the notebooks in `swarm_example/` to see agent chat orchestration in action.
+- Run one of the notebooks in [swarm_example](swarm_example/) to see agent chat orchestration in action.
 
 ## Important Notes / Issues
 
