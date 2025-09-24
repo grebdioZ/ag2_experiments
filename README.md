@@ -4,7 +4,7 @@ This project demonstrates multi-agent conversational workflows using the Autogen
 
 This was taken and adapted from the AG2 examples.
 
-Note that at least *I* could not get this to work with the OpenAI Azure backend and had to use a local Ollama server, see the Important Notes / Issues section below.
+Note that at least **I** could not get this to work with the OpenAI Azure backend and had to use native OpenAI or a local Ollama server, see the Important Notes / Issues section below.
 
 ## Structure
 
@@ -20,7 +20,7 @@ Note that at least *I* could not get this to work with the OpenAI Azure backend 
 
 - Run one of the notebooks in `swarm_example/` to see agent chat orchestration in action.
 
-# Important Notes / Issues
+## Important Notes / Issues
 
 1. I could not get this to work with the OpenAI Azure backend. When executing I get
 
