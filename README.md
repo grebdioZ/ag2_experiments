@@ -1,6 +1,6 @@
 # AG2 Experiments
 
-This project demonstrates multi-agent conversational workflows using the Autogen (AG2) framework. It includes swarm orchestration examples for airline customer service scenarios, such as flight modification, cancellation, and lost baggage handling.
+This project demonstrates multi-agent conversational workflows using the [AG2 framework](github.com/ag2ai/ag2). It includes swarm orchestration examples for airline customer service scenarios, such as flight modification, cancellation, and lost baggage handling.
 
 This was taken and adapted from the AG2 examples.
 
